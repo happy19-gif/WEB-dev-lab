@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P13 - Flexbox vs Grid</title>
+    <link rel="stylesheet" href="P13_Flexbox-vs-Grid-Shared-Layout.css">
+</head>
+<body>
+
+    <!-- Header: Flexbox navigation -->
+    <header class="header">
+        <div class="logo">Sanchit.</div>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="#contact" class="header-button">Hire Me</a>
+    </header>
+
+    <main id="home">
+
+        <!-- Main layout: CSS Grid -->
+        <section class="main-layout">
+
+            <aside class="sidebar" id="about">
+                <div class="profile">
+                    <img
+                        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500"
+                        alt="Profile portrait"
+                    >
+                    <h2>Sanchit Rasal</h2>
+                    <p>Web Development Student</p>
+                </div>
+
+                <div class="skills">
+                    <h3>My Skills</h3>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>Java</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+            </aside>
+
+            <section class="content" id="projects">
+                <h1>My Projects</h1>
+                <p class="intro">
+                    Welcome to my portfolio. Here are some projects
+                    I have created while learning web development.
+                </p>
+
+                <!-- Project cards: CSS Grid -->
+                <div class="project-grid">
+
+                    <article class="project-card">
+                        <img
+                            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800"
+                            alt="Web development workspace"
+                        >
+                        <div class="card-content">
+                            <h3>Portfolio Website</h3>
+                            <p>A personal website created using HTML and CSS.</p>
+                            <div class="card-actions">
+                                <span>HTML • CSS</span>
+                                <a href="#contact">View Project</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <img
+                            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800"
+                            alt="Programming code on a screen"
+                        >
+                        <div class="card-content">
+                            <h3>Java Programs</h3>
+                            <p>A collection of basic Java programming exercises.</p>
+                            <div class="card-actions">
+                                <span>Java</span>
+                                <a href="#contact">View Project</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <img
+                            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800"
+                            alt="Analytics dashboard"
+                        >
+                        <div class="card-content">
+                            <h3>Web Design</h3>
+                            <p>A responsive webpage with a modern design.</p>
+                            <div class="card-actions">
+                                <span>HTML • CSS</span>
+                                <a href="#contact">View Project</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <img
+                            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800"
+                            alt="Team working together"
+                        >
+                        <div class="card-content">
+                            <h3>Team Project</h3>
+                            <p>A collaborative project focused on problem solving.</p>
+                            <div class="card-actions">
+                                <span>Teamwork</span>
+                                <a href="#contact">View Project</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+        </section>
+
+        <!-- Flexbox and Grid comparison -->
+        <section class="comparison">
+            <h2>Flexbox vs CSS Grid</h2>
+
+            <div class="comparison-grid">
+                <article>
+                    <h3>Flexbox</h3>
+                    <p>
+                        Flexbox is best for one-dimensional layouts.
+                        It arranges elements in a row or a column.
+                    </p>
+                    <ul>
+                        <li>Navigation menus</li>
+                        <li>Buttons and action rows</li>
+                        <li>Header alignment</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>CSS Grid</h3>
+                    <p>
+                        CSS Grid is best for two-dimensional layouts.
+                        It arranges elements in rows and columns.
+                    </p>
+                    <ul>
+                        <li>Page layouts</li>
+                        <li>Project card grids</li>
+                        <li>Dashboard layouts</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contact">
+        <p>&copy; 2026 Sanchit Rasal. All rights reserved.</p>
+        <a href="mailto:hello@example.com">Contact Me</a>
+    </footer>
+
+</body>
+</html>

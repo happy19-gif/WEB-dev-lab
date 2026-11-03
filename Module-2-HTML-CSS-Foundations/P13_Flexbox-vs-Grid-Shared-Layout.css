@@ -1,0 +1,275 @@
+/* P13: Choosing Between Flexbox and Grid */
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #334155;
+    background-color: #f8fafc;
+}
+
+/* Header - Flexbox */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 6%;
+    background-color: #1e293b;
+    color: white;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.navbar a,
+.header-button {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #93c5fd;
+}
+
+.header-button {
+    background-color: #2563eb;
+    padding: 10px 18px;
+    border-radius: 6px;
+}
+
+/* Main Page Layout - CSS Grid */
+.main-layout {
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 25px;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    align-self: start;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile h2 {
+    color: #1e293b;
+}
+
+.profile p {
+    color: #64748b;
+}
+
+.skills {
+    margin-top: 30px;
+}
+
+.skills h3 {
+    color: #2563eb;
+}
+
+.skills ul {
+    padding-left: 20px;
+    line-height: 2;
+}
+
+/* Main Content */
+.content h1 {
+    color: #1e293b;
+    font-size: 32px;
+}
+
+.intro {
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* Project Cards - CSS Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 170px;
+    display: block;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 18px;
+}
+
+.card-content h3 {
+    color: #1e293b;
+}
+
+.card-content p {
+    color: #64748b;
+    line-height: 1.5;
+}
+
+/* Card Actions - Flexbox */
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.card-actions span {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.card-actions a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Flexbox vs Grid Comparison - CSS Grid */
+.comparison {
+    max-width: 1150px;
+    margin: 50px auto;
+    padding: 35px 25px;
+}
+
+.comparison h2 {
+    text-align: center;
+    color: #1e293b;
+    margin-bottom: 30px;
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.comparison-grid article {
+    background-color: #eaf2ff;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #2563eb;
+}
+
+.comparison-grid h3 {
+    color: #1d4ed8;
+}
+
+.comparison-grid p,
+.comparison-grid li {
+    line-height: 1.7;
+}
+
+/* Footer - Flexbox */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 25px 6%;
+    background-color: #1e293b;
+    color: white;
+}
+
+footer a {
+    color: #93c5fd;
+    text-decoration: none;
+}
+
+/* Tablet Layout */
+@media (max-width: 850px) {
+    .main-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile Layout */
+@media (max-width: 550px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .project-grid,
+    .comparison-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-layout {
+        margin-top: 20px;
+        padding: 0 15px;
+    }
+
+    .content h1 {
+        font-size: 26px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
